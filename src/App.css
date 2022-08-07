@@ -1,0 +1,44 @@
+* {
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+:root {
+  --color-background: #242E42;
+  --color-blue: #54D2D2;
+  --color-yellow: #FFCB00;
+  --color-yellow-cold: #F8AA4B;
+  --color-orange: #FF6150;
+  --color-text: white;
+  --color-cart-background: #2F3B52;
+  --color-blue-cold: #B3BECB;
+}
+
+.container {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+@media (max-width: 998px) {
+  .container {
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+@media (max-width: 567px) {
+  .container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
