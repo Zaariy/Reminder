@@ -1,0 +1,38 @@
+.main-nav {
+    width: 20px;
+    height: 100vh;
+    background-color: var(--color-cart-background);
+    padding: 0 15px;
+    position: fixed;
+    top: 0;
+    transition: width 1s;
+}
+
+.navbar-header {
+    display: none;
+    transition-delay: 0.2s;
+}
+
+.nav-menu a {
+    display: none;
+}
+
+.main-nav:hover .nav-menu {
+    margin-top: 59px;
+}
+
+.main-nav:hover {
+    width: 240px;
+}
+
+.main-nav:hover .nav-menu ul {
+    display: block;
+}
+
+.main-nav:hover .navbar-header,
+.main-nav:hover .nav-menu span,
+.main-nav:hover .nav-menu a,
+.main-nav:hover .nav-menu span {
+
+    display: block !important;
+}
