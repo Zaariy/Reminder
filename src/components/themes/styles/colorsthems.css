@@ -1,0 +1,31 @@
+.themes .themes-icon {
+
+    font-size: 26px;
+    color: var(--color-text);
+    background-color: var(--color-blue);
+    border-radius: 5px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.light-theme {
+    --color-background: #EBF1F4;
+    --color-blue: #54D2D2;
+    --color-yellow: #FFCB00;
+    --color-yellow-cold: #F8AA4B;
+    --color-orange: #FF6150;
+    --color-text: black;
+    --color-cart-background: white;
+    --color-blue-cold: #B3BECB;
+}
+
+.dark-theme {
+    --color-background: #242E42;
+    --color-blue: #54D2D2;
+    --color-yellow: #FFCB00;
+    --color-yellow-cold: #F8AA4B;
+    --color-orange: #FF6150;
+    --color-text: white;
+    --color-cart-background: #2F3B52;
+    --color-blue-cold: #B3BECB;
+}

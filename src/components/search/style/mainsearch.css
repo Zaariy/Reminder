@@ -1,0 +1,31 @@
+.search {
+    flex: 0.8;
+}
+
+.search .content {
+    position: relative;
+}
+
+.search .content input {
+    width: 100%;
+    height: 37px;
+    background-color: transparent;
+    border: 1px solid var(--color-blue-cold);
+    border-radius: 8px;
+    padding-left: 40px;
+    color: var(--color-text);
+    box-sizing: border-box;
+    outline: none;
+}
+
+.search .content input::placeholder {
+    color: var(--color-text);
+}
+
+.search .content .search-icon {
+    color: var(--color-text);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0.8em;
+}

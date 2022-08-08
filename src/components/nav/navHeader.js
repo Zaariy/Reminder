@@ -4,17 +4,17 @@ import './style/navheader.css'
 const profileImg = require('../../assets/profile.jpg')
 
 
-function NavHeader() {
+function NavHeader({lang}) {
     return (
         <div className="navbar-header">
             <header>
-                <h1>Reminder</h1>
+                <h1>{lang?.nav.header}</h1>
             </header>
             <div className="content">
                 <img src={profileImg} alt='img-profile' />
                 <div>
                     <span >Mohamed Zaary</span>
-                    <button>Profile</button>
+                    <button>{lang?.nav["btn-profile"] }</button>
                 </div>
             </div>
 
