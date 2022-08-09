@@ -6,6 +6,7 @@ import Language from '../languages/lang';
 
 function Header() {
     return (
+
         <div className="main-header">
            <Search /> 
            <Themes />

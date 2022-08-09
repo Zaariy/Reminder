@@ -1,0 +1,87 @@
+.main-create-notes {
+    width: 300px;
+    background-color: var(--color-cart-background);
+    height: calc(100vh - 70px);
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 9px 5px 0 5px;
+}
+
+@media (max-width: 567px) {
+    .main-create-notes {
+        width: 100%;
+    }
+}
+
+.main-create-notes button {
+    width: 100%;
+    border: none;
+    height: 36px;
+    border-radius: 10px;
+    outline: none;
+    background-color: var(--color-yellow);
+    color: var(--color-text);
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-create-notes button svg {
+    font-size: 20px;
+    margin-right: 6px;
+}
+
+.main-create-notes h3 {
+    font-weight: 600;
+    margin-top: 18px;
+    margin-bottom: 28px;
+    color: var(--color-text);
+
+}
+
+.main-create-notes .card {
+    background-color: var(--color-background);
+    height: 106px;
+    color: var(--color-text);
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 8px 0;
+}
+
+.main-create-notes .card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-create-notes .card-header span:nth-child(1) {
+    font-weight: 600;
+}
+
+.main-create-notes .card-header span:nth-child(2) {
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.main-create-notes .card-body {
+    padding-top: 15px;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+.active-a {
+
+    background-color: var(--color-blue) !important;
+}
+
+.active-b {
+    background-color: var(--color-orange) !important;
+
+}
+
+/* .main-create-notes .all-notes-data {
+    margin: 5px 0;
+} */

@@ -1,0 +1,21 @@
+.dashboard {
+    display: flex;
+    width: 100%;
+}
+
+.dashboard .dash-content {
+
+    height: calc(100vh - 70px);
+    width: calc(100% - 300px - 32px);
+    margin-left: 15px;
+
+    box-sizing: border-box;
+    border-radius: 10px;
+
+}
+
+@media (max-width: 567px) {
+    .dashboard .dash-content {
+        display: none;
+    }
+}

@@ -5,7 +5,15 @@
     padding: 0 15px;
     /* position: fixed;
     top: 0; */
+    display: flex;
     transition: width 1s;
+}
+
+/* responsive */
+@media (max-width:567px) {
+    .main-nav {
+        display: none;
+    }
 }
 
 .navbar-header {
@@ -23,6 +31,7 @@
 
 .main-nav:hover {
     width: 240px;
+    display: block;
 }
 
 .main-nav:hover .nav-menu ul {
