@@ -1,0 +1,23 @@
+.box-tool {
+    width: 100%;
+
+    /* margin-left: 15px; */
+    background-color: var(--color-cart-background);
+    height: 54px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+
+}
+
+.box-tool h3 {
+    color: var(--color-blue);
+}
+
+.box-tool .tools ul li {
+    color: var(--color-text);
+    cursor: pointer;
+}

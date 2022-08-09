@@ -1,0 +1,7 @@
+.doc-edit {
+    margin-top: 10px;
+    background-color: var(--color-cart-background);
+    height: calc(100% - 65px);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
