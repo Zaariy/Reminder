@@ -34,6 +34,7 @@
     display: flex;
     margin-bottom: 12px;
     align-items: center;
+    width: 100%;
     transition: 0.5s ease-in;
     height: 39px;
 }
@@ -44,10 +45,18 @@
 
 }
 
-.nav-menu ul .nav-items li:hover,
+/* .nav-menu ul .nav-items li:hover,
 .nav-menu ul .support-items li:hover,
 .settings-items ul li:hover {
     background-color: var(--color-blue);
     padding-left: 20px;
     border-radius: 10px;
+} */
+
+/* class acitve hover */
+.active-nav-click {
+    background-color: var(--color-blue);
+    padding-left: 5.5px;
+    border-radius: 10px;
+
 }

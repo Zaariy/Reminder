@@ -1,13 +1,14 @@
 import Navmenu from "./navMenu";
 import NavHeader from "./navHeader";
-import React from "react";
 import './style/nav.css'
 
-function MainNav() {
+function MainNav({lang}) {
+    
+    
     return (
         <div className="main-nav">
-            <NavHeader />
-            <Navmenu />
+            <NavHeader lang={lang} />
+            <Navmenu lang={lang} />
         </div>
 
     )

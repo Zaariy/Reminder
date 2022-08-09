@@ -1,10 +1,10 @@
 .main-nav {
-    width: 20px;
+    width: 35px;
     height: 100vh;
     background-color: var(--color-cart-background);
     padding: 0 15px;
-    position: fixed;
-    top: 0;
+    /* position: fixed;
+    top: 0; */
     transition: width 1s;
 }
 

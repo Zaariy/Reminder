@@ -1,8 +1,19 @@
-[
-    {
-        "nav": {
-            "header": "Reminder",
-            "btn-profile": "Profile"
-        }
+{
+    "nav": {
+        "header": "Reminder",
+        "btn-profile": "Profile",
+        "ul-names": [
+            "MENU",
+            "SUPPORT",
+            "SETTNGS"
+        ],
+        "li-items-names": [
+            "Dashboard",
+            "Tasks",
+            "Activities",
+            "Need Help",
+            "Contact Us",
+            "Log out"
+        ]
     }
-]
+}
