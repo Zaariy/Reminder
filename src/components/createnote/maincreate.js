@@ -1,15 +1,22 @@
 import React, { useRef }  from 'react';
 import './style/maincreate.css'
-// import navHoverOnClick from '../../utils/navhover';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faFileCirclePlus} from '@fortawesome/free-solid-svg-icons'
+import { faFileCirclePlus } from '@fortawesome/free-solid-svg-icons';
+import data from '../../data/fakedata.json'
+/*
+  Note :
+  the data are coming from fakedata.json we using it just for test our components
+*/ 
 
 
-
-function CreateNote() {
+function CreateNote(props) {
     const cards = useRef(null)
     // for testing 
-    const notes = [1, 2, 3]
+    /*
+        //  ....
+    */
+    const {filterNoteById} = props.setdataparent
+    
 
     function onClickEffect(item) {
         let child = cards.current.children
@@ -40,16 +47,19 @@ function CreateNote() {
                 <h3>ALL NOTES</h3>
                 <div className='all-notes-data' ref={cards}>
                     {
-                        notes.map((ele ,index) => {
+                        data.map((ele ,index) => {
                             return (
-                                <div className='card' onClick={onClickEffect} id={index}  key={index}>
+                                <div className='card' onClick={(e) => {
+                                    onClickEffect(e)
+                                    filterNoteById(index)
+                                }} id={index} key={index}>
                                     <div className='card-header'>
-                                        <span>Math lessen</span>
-                                        <span>10 : 30 pm</span>
+                                        <span>{ele.head }</span>
+                                        <span>{ ele.time}</span>
                                     </div>
                                     <div className='card-body'>
                                         <p>
-                                            This is a new note. You will be able to see it in the future.
+                                            {ele.text}
                                         </p>
                                     </div>
                                 </div>

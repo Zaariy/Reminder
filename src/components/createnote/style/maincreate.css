@@ -70,6 +70,8 @@
     padding-top: 15px;
     font-weight: 400;
     font-size: 13px;
+    height: 15px;
+    overflow: hidden;
 }
 
 .active-a {

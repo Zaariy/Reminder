@@ -5,3 +5,43 @@
     align-items: center;
     column-gap: 30px
 }
+
+.main-header .icon-menu-mobile {
+    color: var(--color-text);
+    font-size: 20px;
+    display: none;
+}
+
+@media (max-width: 567px) {
+    .main-header .icon-menu-mobile {
+        display: block;
+    }
+}
+
+.active-menu-mobile {
+    display: flex;
+    position: fixed;
+    z-index: 3;
+
+}
+
+.icon-menu-mobile {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+}
+
+.per-menu-mobile {
+    position: relative;
+    /* margin-right: 10px; */
+    display: none;
+    height: 100%;
+    width: 12px;
+}
+
+@media (max-width: 567px) {
+    .per-menu-mobile {
+        display: block;
+    }
+}
