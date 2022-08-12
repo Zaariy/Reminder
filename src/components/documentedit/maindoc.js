@@ -3,9 +3,9 @@ import './style/maindoc.css'
 
 
 function DocEdit(props) {
-    const { data } = props
+    const { data , stateLayout } = props
     return (
-    <div className="doc-edit">
+    <div className={stateLayout ? "doc-edit mobile-height" : "doc-edit"}>
         <div className='document-content' >
                 <h1>{data[0]?.head }</h1>    
             <span>{data[0]?.time}</span>

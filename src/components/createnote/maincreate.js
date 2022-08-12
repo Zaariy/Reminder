@@ -43,7 +43,10 @@ function CreateNote(props) {
     return (
         <div className="main-create-notes">
             <div className="content">
-                <button ><FontAwesomeIcon icon={faFileCirclePlus} />New note</button>
+                <div className='control-notes-buttons'>
+                    <button ><FontAwesomeIcon icon={faFileCirclePlus} />New note</button>
+                    {/* <button>Hide</button> */}
+                </div>
                 <h3>ALL NOTES</h3>
                 <div className='all-notes-data' ref={cards}>
                     {
