@@ -1,20 +1,21 @@
 import React from 'react'
+import ReadNote from './readcomponent'
 import './style/maindoc.css'
 
 
+function Switchcomponents(props) {
+    let a = 'read'
+    switch (a) {
+        case 'read': 
+            return  <ReadNote data={props.data} stateLayout={props.stateLayout} />
+        default:
+            return null
+    }     
+}
+
 function DocEdit(props) {
-    const { data , stateLayout } = props
     return (
-    <div className={stateLayout ? "doc-edit mobile-height" : "doc-edit"}>
-        <div className='document-content' >
-                <h1>{data[0]?.head }</h1>    
-            <span>{data[0]?.time}</span>
-            <div className='text'>
-              {data[0]?.text}
-            </div>
-                
-        </div>
-    </div> 
+        <Switchcomponents data={props} />
     )
 }
 export default DocEdit;

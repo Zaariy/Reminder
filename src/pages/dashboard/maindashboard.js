@@ -4,15 +4,16 @@ import CreateNote from "../../components/createnote/maincreate"
 import BoxTools from "../../components/toolbox/mainbox";
 import DocEdit from '../../components/documentedit/maindoc';
 import data from '../../data/fakedata.json'
+import WriteNewNote from '../../components/createnote/docWrite';
 
 // switch components
 
-function SwitchComponent({state , filterNoteById , clearState}) {
+function SwitchComponent({state , filterNoteById , clearState ,stateCreateNote }) {
     // check Display
     if (window.screen.width > 576) {
         return (
                     <div className='dashboard'>
-                            <CreateNote setdataparent={{ filterNoteById }} />
+                            <CreateNote setdataparent={{ filterNoteById  , stateCreateNote}} />
 
                         <div className='dash-content'>
                             <BoxTools  />
@@ -27,7 +28,7 @@ function SwitchComponent({state , filterNoteById , clearState}) {
         case 0:
                 return (
                     <div className='dashboard'>
-                            <CreateNote setdataparent={{ filterNoteById }} />
+                            <CreateNote setdataparent={{ filterNoteById  , stateCreateNote}} />
 
                         <div className='dash-content'>
                             <BoxTools  />
@@ -50,11 +51,11 @@ function SwitchComponent({state , filterNoteById , clearState}) {
             )
     }
 }
-
+// Dashboard page
 function Dashboard() {
 
     const [state, setState] = useState('');
-
+    const [stateWindow , setWindowstate] = useState(false);
     function filterNoteById(id) {
         /*
             // this function is used to filter the notes by id 
@@ -65,7 +66,15 @@ function Dashboard() {
         setState(item)   
     }
 
-
+    function showWindow(state) {
+        /*
+            this function is will call when use click on button
+            New note on Page Dashboard and it will change value of state to true 
+            when you use click on button Save on page CreateNote on {WriteNewNote} component
+            it will change value to false  to hidden component
+            */ 
+       setWindowstate(state)
+    }
     function clearState() {
         /*
             * cleare data from state
@@ -74,12 +83,19 @@ function Dashboard() {
         */
         setState('')
     }
-
+    
     // SwitchComponent :
     // here we display components depending on state and, 
     //display of screen if mobile or desktop
     return (
-        <SwitchComponent state={state}  filterNoteById={filterNoteById} clearState={clearState} />
+        <>
+            <SwitchComponent state={state}
+                filterNoteById={filterNoteById}
+                clearState={clearState}
+                stateCreateNote={{ 'state' : stateWindow, 'setStatefunc':  showWindow }}
+            />
+            {stateWindow ? <WriteNewNote  stateCreateNote={{ 'state' : stateWindow, 'setStatefunc':  showWindow }} /> : ''}
+        </>
     )
 }
 

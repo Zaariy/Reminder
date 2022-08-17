@@ -1,6 +1,6 @@
 import './App.css';
 import Mainpage from './pages/main/mainpage'; 
-import WriteNewNote from './components/createnote/pop-window';
+import WriteNewNote from './components/createnote/docWrite';
 import {BrowserRouter ,Route , Routes} from 'react-router-dom'
 import ar from './data/ar.json'
 import en from './data/en.json'
