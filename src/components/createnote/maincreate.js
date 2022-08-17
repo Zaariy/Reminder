@@ -3,6 +3,7 @@ import './style/maincreate.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileCirclePlus } from '@fortawesome/free-solid-svg-icons';
 import data from '../../data/fakedata.json'
+// import WriteNewNote from './docWrite';
 /*
   Note :
   the data are coming from fakedata.json we using it just for test our components
@@ -15,9 +16,9 @@ function CreateNote(props) {
     /*
         //  ....
     */
-    const {filterNoteById} = props.setdataparent
+    const {filterNoteById , stateCreateNote} = props.setdataparent
     
-
+    console.log('form ' , stateCreateNote)
     function onClickEffect(item) {
         let child = cards.current.children
         let body = document.body.classList.contains('dark-theme')
@@ -43,7 +44,12 @@ function CreateNote(props) {
     return (
         <div className="main-create-notes">
             <div className="content">
-                <button ><FontAwesomeIcon icon={faFileCirclePlus} />New note</button>
+                <div className='control-notes-buttons'>
+                    <button onClick={() => {
+                        stateCreateNote.setStatefunc(!stateCreateNote.state)
+                    }} ><FontAwesomeIcon  icon={faFileCirclePlus} />New note</button>
+                    
+                </div>
                 <h3>ALL NOTES</h3>
                 <div className='all-notes-data' ref={cards}>
                     {

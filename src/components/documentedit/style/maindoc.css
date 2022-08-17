@@ -8,6 +8,11 @@
 
 }
 
+.mobile-height {
+    height: calc(100% - 100px);
+
+}
+
 .doc-edit .document-content {
     width: 100%;
     height: 100%;
@@ -33,5 +38,6 @@
 }
 
 .doc-edit .document-content .text {
-    color: var(--color-text)
+    color: var(--color-text);
+    width: calc(100% - 20px);
 }

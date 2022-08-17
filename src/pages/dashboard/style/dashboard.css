@@ -17,5 +17,24 @@
 @media (max-width: 567px) {
     .dashboard .dash-content {
         display: none;
+
     }
+}
+
+.show-doc-component {
+    width: 100% !important;
+    margin: 0;
+    display: block !important;
+}
+
+.dashboard .back-btn {
+    margin-bottom: 10px;
+    width: 5em;
+    height: 23px;
+    background-color: var(--color-orange);
+    color: var(--color-text);
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-radius: 4px;
 }

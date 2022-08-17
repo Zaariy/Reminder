@@ -5,6 +5,7 @@
     border-radius: 10px;
     box-sizing: border-box;
     padding: 9px 5px 0 5px;
+    /* position: relative; */
 }
 
 @media (max-width: 567px) {
@@ -86,4 +87,21 @@
 
 /* .main-create-notes .all-notes-data {
     margin: 5px 0;
+} */
+
+/* .main-create-notes .control-notes-buttons {
+    display: flex;
+    gap: 10px
+}
+
+.main-create-notes .control-notes-buttons button:nth-child(1) {
+
+    width: 80%;
+}
+
+.main-create-notes .control-notes-buttons button:nth-child(2) {
+
+    width: 20%;
+    background-color: var(--color-orange);
+    color: var(--color-text)
 } */
