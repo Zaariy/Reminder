@@ -17,9 +17,9 @@ function Language() {
                 <li onClick={() => {
                     setIcon(false)
                 }} ><Link to='/en'>English</Link></li>
-                <li onClick={() => {
+                {/* <li onClick={() => {
                     setIcon(false)
-                }}   ><Link to='/ar'>Arabic</Link></li>
+                }}   ><Link to='/ar'>Arabic</Link></li> */}
             </ul>
         </div>
     )
