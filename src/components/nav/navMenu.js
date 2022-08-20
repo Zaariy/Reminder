@@ -9,7 +9,8 @@ import {
     faChartLine,
     faArrowRightFromBracket ,
     faCircleQuestion,
-    faHeadset
+    faHeadset,
+    faUser
 } from '@fortawesome/free-solid-svg-icons';
 import navHoverOnClick from '../../utils/navhover';
 
@@ -24,8 +25,8 @@ function Navmenu({lang}) {
                 <li className="nav-items">
                     <span>{lang?.nav["ul-names"][0] }</span>
                     <ul>
-                        <li><FontAwesomeIcon className='icon-nav-bar' icon={faBorderAll} /><Link to={"/"}>{lang?.nav["li-items-names"][0] }</Link></li>
-                        <li><FontAwesomeIcon className='icon-nav-bar' icon={faListCheck} /><Link to={"/"}>{lang?.nav["li-items-names"][1] }</Link></li>
+                        <li><FontAwesomeIcon className='icon-nav-bar' icon={faBorderAll} /><Link to={"/dashboard"}>{lang?.nav["li-items-names"][0] }</Link></li>
+                        <li><FontAwesomeIcon className='icon-nav-bar' icon={faListCheck} /><Link to={"/taskes"}>{lang?.nav["li-items-names"][1] }</Link></li>
                         <li><FontAwesomeIcon className='icon-nav-bar' icon={faChartLine} /><Link to={"/"}>{lang?.nav["li-items-names"][2] }</Link></li>
                     </ul>
                 </li>
@@ -39,6 +40,7 @@ function Navmenu({lang}) {
                 <li className="settings-items">
                    <span>{lang?.nav["ul-names"][2] }</span> 
                     <ul>
+                        <li><FontAwesomeIcon className='icon-nav-bar' icon={faUser} /><Link to={"/"}>Account</Link></li>
                         <li><FontAwesomeIcon className='icon-nav-bar' icon={faArrowRightFromBracket} /><Link to={"/"}>{lang?.nav["li-items-names"][5]}</Link></li>
                     </ul>
                 </li>

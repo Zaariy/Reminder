@@ -1,8 +1,6 @@
 import './App.css';
 import Mainpage from './pages/main/mainpage'; 
-import WriteNewNote from './components/createnote/docWrite';
 import {BrowserRouter ,Route , Routes} from 'react-router-dom'
-import ar from './data/ar.json'
 import en from './data/en.json'
 
 function App() {
@@ -10,10 +8,10 @@ function App() {
      
       <BrowserRouter>
         <Routes>
-        <Route exact="true"  path="/en" element={<Mainpage lang={en} />} />
-        <Route path="/ar" element={<Mainpage lang={ar} />} />
-        <Route path="/*" element={<Mainpage lang={en} />} />
-        <Route path="/new" element={<WriteNewNote />} />
+        <Route exact={true}  path="/" element={<Mainpage lang={en} path={'dashboard'} />} />
+        <Route   path="/dashboard" element={<Mainpage lang={en} path={'dashboard'} />} />
+        <Route   path="/*" element={<Mainpage lang={en} path={'dashboard'} />} />
+        <Route   path="/taskes" element={<Mainpage lang={en} path={'taskes'} />} />
         </Routes>
       </BrowserRouter>
       
